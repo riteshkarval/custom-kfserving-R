@@ -10,4 +10,4 @@ spec:
       custom:
         name: custom
         container:
-          image: {username}/kfserving-custom-model
+          image: ocdr/custom-kfserving:R
