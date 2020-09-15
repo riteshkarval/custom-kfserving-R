@@ -9,10 +9,14 @@ import numpy as np
 import requests, json
 import sys, os
 import rpy2.robjects as robjects
+import argparse
 
-model_name = 'custom_r'
-#model_name = os.getenv('MODEL_NAME',None)
-IN_DIR = ""
+parser = argparse.ArgumentParser()
+parser.add_argument('--model_name', dest = 'model_name', default='kfserving-custom-model', help='model name')
+parser.add_argument('--model_base_path', dest = 'model_dir', default='/opt/dkube/model/', help='model directory')
+args = parser.parse_args()
+model_name = args.model_name
+IN_DIR = 
 
 class KFServingSampleModel(kfserving.KFModel):
     def __init__(self, name: str):
