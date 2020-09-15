@@ -16,7 +16,7 @@ parser.add_argument('--model_name', dest = 'model_name', default='kfserving-cust
 parser.add_argument('--model_base_path', dest = 'model_dir', default='/opt/dkube/model/', help='model directory')
 args = parser.parse_args()
 model_name = args.model_name
-IN_DIR = 
+IN_DIR = args.model_dir
 
 class KFServingSampleModel(kfserving.KFModel):
     def __init__(self, name: str):
