@@ -16,6 +16,7 @@ RUN Rscript -e "install.packages('mlbench')"
 RUN Rscript -e "install.packages('randomForest')"
 RUN Rscript -e "install.packages('doMC')"
 RUN Rscript -e "install.packages('e1071')"
+RUN Rscript -e "install.packages('png')"
 # Install production dependencies.
 RUN pip3 install rpy2
 COPY . .
