@@ -14,4 +14,4 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
         repository: ocdr/custom-kfserving
-        tags: R
+        tags: R-mnist
